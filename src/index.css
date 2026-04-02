@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2e7d47;
+  --color-primary-container: #a5d6b0;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #1b5e30;
+
+  --color-secondary: #795900;
+  --color-secondary-container: #ffbf00;
+  --color-on-secondary-container: #6d5000;
+
+  --color-tertiary: #c00014;
+  --color-tertiary-container: #ffd2cd;
+
+  --color-background: #f8f9fa;
+  --color-surface: #f8f9fa;
+  --color-surface-container: #edeeef;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container-highest: #e1e3e4;
+
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #3b4b37;
+  --color-outline: #6b7c65;
+  --color-outline-variant: #b9ccb2;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+  --font-number: "Manrope", sans-serif;
+}
+
+/* Dark theme overrides */
+.dark {
+  --color-primary: #6fcf87;
+  --color-primary-container: #1a4a28;
+  --color-on-primary: #0f2b18;
+  --color-on-primary-container: #a5d6b0;
+
+  --color-secondary: #ffbf00;
+  --color-secondary-container: #4a3800;
+  --color-on-secondary-container: #ffe08a;
+
+  --color-tertiary: #ff6b6b;
+  --color-tertiary-container: #930010;
+
+  --color-background: #0f1214;
+  --color-surface: #0f1214;
+  --color-surface-container: #1a1e21;
+  --color-surface-container-low: #151919;
+  --color-surface-container-lowest: #0a0d0e;
+  --color-surface-container-high: #242829;
+  --color-surface-container-highest: #2e3234;
+
+  --color-on-surface: #e1e3e4;
+  --color-on-surface-variant: #b0c4ab;
+  --color-outline: #8a9e84;
+  --color-outline-variant: #3b4b37;
+
+  --color-error: #ff6b6b;
+  --color-error-container: #930010;
+  --color-on-error-container: #ffdad6;
+}
+
+button, [role="button"], [onclick], summary {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100dvh;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.font-number {
+  font-family: "Manrope", sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.filled {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Smooth scrolling for anchor links (used on the hero page "Learn More" button) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Staggered fade-in animations for hero page sections */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-fade-1 { animation: heroFadeUp 0.6s ease-out 0.1s both; }
+.hero-fade-2 { animation: heroFadeUp 0.6s ease-out 0.3s both; }
+.hero-fade-3 { animation: heroFadeUp 0.6s ease-out 0.5s both; }
+
+/* Subtle glow effect on the phone mockup */
+@keyframes phonePulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(46, 125, 71, 0.15); }
+  50% { box-shadow: 0 0 60px rgba(46, 125, 71, 0.25); }
+}
+
+.phone-glow {
+  animation: phonePulse 3s ease-in-out infinite;
+}
