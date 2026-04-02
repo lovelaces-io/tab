@@ -144,7 +144,7 @@ export function HeroPage() {
                 key={card.title}
                 className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center"
               >
-                <div className="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center flex-shrink-0 md:mb-4">
+                <div className="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center flex-shrink-0 md:mb-2">
                   <MaterialIcon name={card.icon} className="text-error" />
                 </div>
                 <div>
@@ -193,7 +193,7 @@ export function HeroPage() {
                 key={card.title}
                 className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center"
               >
-                <div className="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 md:mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 md:mb-2">
                   <MaterialIcon name={card.icon} className="text-primary" />
                 </div>
                 <div>
