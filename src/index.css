@@ -132,13 +132,3 @@ html {
 .hero-fade-1 { animation: heroFadeUp 0.6s ease-out 0.1s both; }
 .hero-fade-2 { animation: heroFadeUp 0.6s ease-out 0.3s both; }
 .hero-fade-3 { animation: heroFadeUp 0.6s ease-out 0.5s both; }
-
-/* Subtle glow effect on the phone mockup */
-@keyframes phonePulse {
-  0%, 100% { box-shadow: 0 0 40px rgba(46, 125, 71, 0.15); }
-  50% { box-shadow: 0 0 60px rgba(46, 125, 71, 0.25); }
-}
-
-.phone-glow {
-  animation: phonePulse 3s ease-in-out infinite;
-}

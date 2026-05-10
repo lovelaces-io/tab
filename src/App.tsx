@@ -45,7 +45,10 @@ function AppShell() {
   // expense after 10 seconds. Only starts once the user has dismissed the
   // demo overlay (indicated by sessionStorage flag). Re-arms when
   // notifications are cleared (which happens on data reset).
+  // Skipped on the marketing page so demo behavior never leaks there.
   useEffect(() => {
+    if (isHeroPage) return;
+
     const demoOverlayDismissed = sessionStorage.getItem("tab-demo-seen");
     if (!demoOverlayDismissed) return;
 
@@ -67,7 +70,6 @@ function AppShell() {
 
   return (
     <div className="min-h-screen bg-background text-on-surface">
-      <NotificationToast />
       <Routes>
         <Route path="/" element={<HeroPage />} />
         <Route path="/current" element={<MyTabPage />} />
@@ -79,6 +81,7 @@ function AppShell() {
       </Routes>
       {!isHeroPage && (
         <>
+          <NotificationToast />
           <DemoOverlay />
           <BottomNav onAddClick={() => setAddSheetOpen(true)} />
           <AddExpenseSheet

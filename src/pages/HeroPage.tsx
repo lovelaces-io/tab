@@ -15,19 +15,19 @@ export function HeroPage() {
   return (
     <div className="min-h-screen bg-background text-on-surface">
       {/* Navigation bar */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src="/tab-logo-dark.svg" alt="Tab logo" className="w-8 h-8 rounded-lg dark:hidden" />
-            <img src="/tab-logo-dark-transparent.svg" alt="Tab logo" className="w-8 h-8 hidden dark:block" />
-            <span className="font-black text-2xl tracking-widest text-[#1a1a1a] dark:text-primary uppercase">
-              TAB
+      <nav className="sticky top-0 z-50 bg-background/85 backdrop-blur-md border-b border-outline-variant/15">
+        <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <img src="/tab-logo-dark.svg" alt="Tab logo" className="w-7 h-7 rounded-md dark:hidden" />
+            <img src="/tab-logo-dark-transparent.svg" alt="Tab logo" className="w-7 h-7 hidden dark:block" />
+            <span className="font-black text-xl tracking-[0.2em] text-[#1a1a1a] dark:text-primary uppercase">
+              Tab
             </span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-7">
             <a
               href="#problem"
-              className="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+              className="hidden sm:block text-[11px] font-semibold uppercase tracking-[0.18em] text-on-surface-variant/80 hover:text-on-surface transition-colors"
             >
               About
             </a>
@@ -35,14 +35,14 @@ export function HeroPage() {
               href="https://github.com/lovelaces-io/tab"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+              className="hidden sm:block text-[11px] font-semibold uppercase tracking-[0.18em] text-on-surface-variant/80 hover:text-on-surface transition-colors"
             >
               GitHub
             </a>
             <Link
               to="/current"
               onClick={resetDemoOverlay}
-              className="bg-primary text-on-primary font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg hover:bg-primary/80 active:scale-[0.98] transition-all"
+              className="bg-primary text-on-primary font-semibold text-[11px] uppercase tracking-[0.18em] px-4 py-2 rounded-md hover:bg-primary/90 active:translate-y-px transition-all"
             >
               Try the Demo
             </Link>
@@ -51,31 +51,32 @@ export function HeroPage() {
       </nav>
 
       {/* Hero section */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 md:pt-24 pb-20">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      <section className="max-w-6xl mx-auto px-6 pt-14 md:pt-20 pb-16 md:pb-20">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Headline and call to action */}
           <div className="flex-1 text-center md:text-left hero-fade-1">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary mb-5">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
               Expense Management, Simplified
             </span>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight mb-6">
-              Expense reports shouldn't be a chore
+            <h1 className="text-[2.5rem] md:text-[4rem] font-black tracking-[-0.035em] leading-[1.05] mb-6">
+              Expense reports<br className="hidden sm:block" /> shouldn't be a chore
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-lg mb-8 mx-auto md:mx-0">
+            <p className="text-lg text-on-surface-variant max-w-[34rem] mb-9 mx-auto md:mx-0 leading-relaxed">
               Tab makes submitting out-of-pocket business expenses fast, transparent, and painless.
               No more lost receipts, confusing policies, or invisible approval chains.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link
                 to="/current"
                 onClick={resetDemoOverlay}
-                className="bg-primary text-on-primary font-bold uppercase tracking-widest text-sm px-8 py-4 rounded-lg hover:bg-primary/80 active:scale-[0.98] transition-all shadow-lg shadow-primary/20 text-center"
+                className="bg-primary text-on-primary font-semibold uppercase tracking-[0.18em] text-xs px-7 py-3.5 rounded-md hover:bg-primary/90 active:translate-y-px transition-all shadow-md shadow-primary/15 text-center"
               >
                 Try the Demo
               </Link>
               <a
                 href="#problem"
-                className="bg-surface-container text-on-surface font-bold uppercase tracking-widest text-sm px-8 py-4 rounded-lg hover:bg-surface-container-high active:scale-[0.98] transition-all text-center"
+                className="font-semibold uppercase tracking-[0.18em] text-xs px-7 py-3.5 rounded-md text-on-surface border border-outline-variant/40 hover:border-on-surface/40 hover:bg-surface-container/40 active:translate-y-px transition-all text-center"
               >
                 Learn More
               </a>
@@ -85,7 +86,7 @@ export function HeroPage() {
           {/* Phone mockup — hidden on mobile to keep the hero section compact */}
           <div className="hidden md:block flex-shrink-0 hero-fade-2">
             <div className="relative mx-auto w-[280px] md:w-[320px]">
-              <div className="rounded-[3rem] border-[8px] border-black overflow-hidden shadow-2xl phone-glow">
+              <div className="rounded-[2.75rem] border-[7px] border-black overflow-hidden shadow-[0_30px_60px_-20px_rgba(0,0,0,0.35)] dark:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]">
                 {/* Dark mode: dark screenshot with black notch area */}
                 <div className="dark:hidden bg-white">
                   <div className="mx-auto w-28 h-7 bg-black rounded-b-2xl" />
@@ -111,18 +112,19 @@ export function HeroPage() {
       </section>
 
       {/* Problem section */}
-      <section id="problem" className="bg-surface-container/50 py-20">
+      <section id="problem" className="bg-surface-container/50 py-16 md:py-20 border-y border-outline-variant/15">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12 hero-fade-3">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-3 block">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-error mb-3">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-error" />
               The Problem
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-[-0.025em]">
               Why employees give up on expense reports
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
                 icon: "description",
@@ -142,13 +144,13 @@ export function HeroPage() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center"
+                className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/15 flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-outline-variant/25"
               >
-                <div className="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center flex-shrink-0 md:mb-2">
+                <div className="w-11 h-11 rounded-full bg-error-container/25 flex items-center justify-center flex-shrink-0 md:mb-3">
                   <MaterialIcon name={card.icon} className="text-error" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg tracking-tight mb-2">{card.title}</h3>
+                  <h3 className="font-bold text-lg tracking-tight mb-1.5">{card.title}</h3>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
                     {card.description}
                   </p>
@@ -160,18 +162,19 @@ export function HeroPage() {
       </section>
 
       {/* Solution section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-3 block">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary mb-3">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
               How Tab Helps
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-[-0.025em]">
               Built for the way you actually work
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
                 icon: "touch_app",
@@ -191,13 +194,13 @@ export function HeroPage() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center"
+                className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/15 flex flex-row items-center gap-4 md:flex-col md:items-center md:text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-primary/30"
               >
-                <div className="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 md:mb-2">
+                <div className="w-11 h-11 rounded-full bg-primary-container/25 flex items-center justify-center flex-shrink-0 md:mb-3">
                   <MaterialIcon name={card.icon} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg tracking-tight mb-2">{card.title}</h3>
+                  <h3 className="font-bold text-lg tracking-tight mb-1.5">{card.title}</h3>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
                     {card.description}
                   </p>
@@ -209,33 +212,33 @@ export function HeroPage() {
       </section>
 
       {/* Footer call to action */}
-      <section className="py-20 bg-surface-container/50">
+      <section className="py-16 md:py-20 bg-surface-container/50 border-t border-outline-variant/15">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-[-0.025em] mb-4">
             See it in action
           </h2>
-          <p className="text-on-surface-variant mb-8">
+          <p className="text-on-surface-variant mb-8 leading-relaxed">
             Tab is an interactive demo with test data, simulated approvals, and real policy checks.
             Try adding an expense, closing a tab, or exploring the policy engine.
           </p>
           <Link
             to="/current"
             onClick={resetDemoOverlay}
-            className="inline-block bg-primary text-on-primary font-bold uppercase tracking-widest text-sm px-10 py-4 rounded-lg hover:bg-primary/80 active:scale-[0.98] transition-all shadow-lg shadow-primary/20"
+            className="inline-block bg-primary text-on-primary font-semibold uppercase tracking-[0.18em] text-xs px-9 py-3.5 rounded-md hover:bg-primary/90 active:translate-y-px transition-all shadow-md shadow-primary/15"
           >
             Try the Demo
           </Link>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/40 mt-6">
-            Built with React, TypeScript, Tailwind CSS, and Vite
-          </p>
-          <a
-            href="https://github.com/lovelaces-io/tab"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/40 mt-3 hover:text-primary transition-colors"
-          >
-            View Source on GitHub
-          </a>
+          <div className="mt-10 flex flex-col items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-on-surface-variant/45">
+            <a
+              href="https://github.com/lovelaces-io/tab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              View Source on GitHub
+            </a>
+            <span>Built with React, TypeScript, Tailwind &amp; Vite</span>
+          </div>
         </div>
       </section>
     </div>
